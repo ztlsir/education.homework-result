@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ztlsir.homework.result.homeworkResult.model.HomeworkResult;
 import com.ztlsir.shared.model.BaseRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HomeworkResultRepository extends BaseRepository<HomeworkResult> {
     private final ObjectMapper objectMapper;
     private JpaRepository<HomeworkResultPO,String> homeworkResultDao;
