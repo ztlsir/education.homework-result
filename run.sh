@@ -1,0 +1,1 @@
+./gradlew clean :education-homework-result-service:bootRun -Dspring.profiles.active=default
