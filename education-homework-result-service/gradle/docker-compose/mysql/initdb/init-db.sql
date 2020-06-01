@@ -8,7 +8,7 @@ use homework_result
 go
 
 -- 创建homeworks表
-CREATE TABLE HomeworkResults
+CREATE TABLE homework_results
 (
   ID           VARCHAR(64) NOT NULL,
   JSON_CONTENT JSON        NOT NULL,

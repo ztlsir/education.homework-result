@@ -5,16 +5,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ztlsir.homework.result.homeworkResult.model.HomeworkResult;
 import com.ztlsir.shared.model.BaseRepository;
 import lombok.var;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 public class HomeworkResultRepository extends BaseRepository<HomeworkResult> {
     private final ObjectMapper objectMapper;
-    private JpaRepository<HomeworkResultPO,String> homeworkResultDao;
+    private HomeworkResultDao homeworkResultDao;
 
-    public HomeworkResultRepository(ObjectMapper objectMapper) {
+    public HomeworkResultRepository(
+            ObjectMapper objectMapper,
+            HomeworkResultDao homeworkResultDao) {
         this.objectMapper = objectMapper;
+        this.homeworkResultDao = homeworkResultDao;
     }
 
     @Override
