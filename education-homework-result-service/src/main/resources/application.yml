@@ -32,4 +32,4 @@ eureka:
 
 education:
   rabbit:
-    publishX: education_event
+    publishX: education_homework_result_event
