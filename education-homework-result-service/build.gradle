@@ -28,3 +28,9 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+task dockerDown() {
+}
+
+apply from: "${projectDir}/gradle/docker-compose/docker-compose.gradle"
+apply from: "${projectDir}/gradle/version-info.gradle"
