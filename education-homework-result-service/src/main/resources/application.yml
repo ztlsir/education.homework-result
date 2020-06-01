@@ -17,6 +17,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: homework-result-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
@@ -24,3 +29,7 @@ eureka:
       defaultZone: http://127.0.0.1:803/eureka/
   instance:
     prefer-ip-address: true
+
+education:
+  rabbit:
+    publishX: education_event

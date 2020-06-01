@@ -3,6 +3,7 @@ package com.ztlsir.homework.result.homeworkResult.repository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ztlsir.homework.result.homeworkResult.model.HomeworkResult;
+import com.ztlsir.shared.event.DomainEventSender;
 import com.ztlsir.shared.model.BaseRepository;
 import lombok.var;
 import org.springframework.stereotype.Component;
@@ -14,7 +15,9 @@ public class HomeworkResultRepository extends BaseRepository<HomeworkResult> {
 
     public HomeworkResultRepository(
             ObjectMapper objectMapper,
-            HomeworkResultDao homeworkResultDao) {
+            HomeworkResultDao homeworkResultDao,
+            DomainEventSender sender) {
+        super(sender);
         this.objectMapper = objectMapper;
         this.homeworkResultDao = homeworkResultDao;
     }

@@ -15,8 +15,11 @@ public class HomeworkResultController implements HomeworkResultClient {
     private final HomeworkResultApplicationService applicationService;
     private HomeworkResultRepresentationService representationService;
 
-    public HomeworkResultController(HomeworkResultApplicationService applicationService) {
+    public HomeworkResultController(
+            HomeworkResultApplicationService applicationService,
+            HomeworkResultRepresentationService representationService) {
         this.applicationService = applicationService;
+        this.representationService = representationService;
     }
 
     @Override

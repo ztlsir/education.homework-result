@@ -35,6 +35,10 @@ subprojects {
 
 		implementation 'org.springframework.boot:spring-boot-starter-web'
 		implementation 'com.google.guava:guava:27.1-jre'
+		implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
+		implementation 'org.springframework.cloud:spring-cloud-bus'
+		implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
 	}
 
 	dependencyManagement {

@@ -1,6 +1,8 @@
 package com.ztlsir.homework.result.homeworkResult.model;
 
+import com.ztlsir.homework.result.homeworkResult.event.HomeworkResultCreatedEvent;
 import com.ztlsir.homework.result.homeworkResult.representation.HomeworkResultRepresentation;
+import com.ztlsir.shared.model.BaseAggregate;
 import com.ztlsir.shared.value.ClassAndGrade;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,7 +14,7 @@ import static java.time.Instant.now;
 
 @Getter
 @Builder
-public class HomeworkResult {
+public class HomeworkResult extends BaseAggregate {
     private String id;
     private ClassAndGrade classAndGrade;
     public String homeworkId;
@@ -35,6 +37,8 @@ public class HomeworkResult {
                 .homeworkId(homeworkId)
                 .status(HomeworkResultStatus.EDIT)
                 .build();
+
+        homeworkResult.raiseEvent(new HomeworkResultCreatedEvent(homeworkResult.id));
         return homeworkResult;
     }
 
