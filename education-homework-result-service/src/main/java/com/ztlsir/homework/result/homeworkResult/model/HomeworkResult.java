@@ -1,5 +1,6 @@
 package com.ztlsir.homework.result.homeworkResult.model;
 
+import com.ztlsir.homework.result.homeworkResult.representation.HomeworkResultRepresentation;
 import com.ztlsir.shared.value.ClassAndGrade;
 import lombok.Builder;
 import lombok.Getter;
@@ -35,5 +36,16 @@ public class HomeworkResult {
                 .status(HomeworkResultStatus.EDIT)
                 .build();
         return homeworkResult;
+    }
+
+    public HomeworkResultRepresentation toRepresentation() {
+        return new HomeworkResultRepresentation(
+                this.id,
+                this.classAndGrade,
+                this.homeworkId,
+                this.reuslt,
+                this.studentId,
+                this.createdAt,
+                this.status.name());
     }
 }
