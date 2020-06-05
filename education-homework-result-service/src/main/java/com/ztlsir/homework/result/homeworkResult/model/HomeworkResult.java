@@ -1,7 +1,7 @@
 package com.ztlsir.homework.result.homeworkResult.model;
 
-import com.ztlsir.homework.result.homeworkResult.event.HomeworkResultCreatedEvent;
 import com.ztlsir.homework.result.homeworkResult.representation.HomeworkResultRepresentation;
+import com.ztlsir.shared.event.homeworkResult.HomeworkResultCreatedEvent;
 import com.ztlsir.shared.model.BaseAggregate;
 import com.ztlsir.shared.value.ClassAndGrade;
 import lombok.Builder;

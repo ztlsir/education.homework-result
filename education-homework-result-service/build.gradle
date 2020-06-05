@@ -16,7 +16,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'mysql:mysql-connector-java'
 
-	implementation 'com.ztlsir:education-homework-result-api:0.0.1-20200601.025515-4'
+	implementation 'com.ztlsir:education-homework-result-api:0.0.1-20200605.030235-7'
+	implementation 'com.ztlsir:education-shared-event:0.0.1-20200605.031946-4'
+	implementation 'com.ztlsir:education-shared-model:0.0.1-20200605.042953-3'
+	implementation 'com.ztlsir:education-shared-value:0.0.1-20200604.094004-2'
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
