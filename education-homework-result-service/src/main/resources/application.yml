@@ -23,6 +23,14 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    rabbitmq:
+      queue: sleuth
+    sender:
+      type: rabbit
 
 eureka:
   client:
